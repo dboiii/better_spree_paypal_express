@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_paypal_express'
   s.version     = SpreePayPalExpress::VERSION
   s.summary     = 'Adds PayPal Express as a Payment Method to Spree Commerce'
-  s.description = s.summary
+  s.description = 'Adds PayPal Express as a Payment Method to Spree Commerce'
   s.required_ruby_version = '>= 2.1.0'
 
   s.author       = 'Spree Commerce'
@@ -17,10 +17,9 @@ Gem::Specification.new do |s|
   s.homepage     = 'http://www.spreecommerce.com'
   s.license      = %q{BSD-3}
 
-  s.files        = `git ls-files`.split("\n")
-  s.test_files   = `git ls-files -- spec/*`.split("\n")
-  s.require_path = 'lib'
-  s.requirements << 'none'
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  #s.require_path = 'lib'
+  #s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 3.2.1'
   s.add_dependency 'paypal-sdk-merchant', '1.106.1'
